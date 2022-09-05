@@ -107,6 +107,12 @@ MongoClient.connect(db, (err, db) => {
 
     }));
 
+    app.use((res, res) => {
+        if (req.session && req.session.userId) {
+            tracer.setUSer(req.session.userId)
+        }
+    });
+
     /*
     // Fix for A8 - CSRF
     // Enable Express csrf protection
