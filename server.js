@@ -1,6 +1,11 @@
 "use strict";
 
 const tracer = require('dd-trace').init({appsec: true});
+function handle() {
+    tracer.setUser({
+        id: 'lorem'
+    })
+}
 const express = require("express");
 const favicon = require("serve-favicon");
 const bodyParser = require("body-parser");
