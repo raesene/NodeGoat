@@ -107,7 +107,7 @@ MongoClient.connect(db, (err, db) => {
 
     }));
 
-    app.use((res, res) => {
+    app.use((req, res) => {
         if (req.session && req.session.userId) {
             tracer.setUser({ id: req.session.userId })
         }
