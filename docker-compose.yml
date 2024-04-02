@@ -38,7 +38,7 @@ services:
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
 
   mongo:
-    image: mongo:latest
+    image: mongo:4.4.16
     user: mongodb
     expose:
       - 27017
